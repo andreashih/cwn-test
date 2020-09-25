@@ -10,7 +10,7 @@ def search_word(word):
     df = []
     result = []
     
-    for i in range(0, len(wn.synsets(tran_result))):
+    for i in range(0, len(synset)):
         df.append(synset[i].definition()) # find the definition of the word
         num.append('{}-{}'.format(str(wn.synset(synset[i].name()).offset()).zfill(8), wn.synset(synset[i].name()).pos())) 
         # Find the id num of the synset. It has to be 8-digit with a pos tag.

@@ -3,6 +3,7 @@ from googletrans import Translator
 from nltk.corpus import wordnet as wn
 def search_word(word):
     translator = Translator()
+    # Initialize the translator
     tran_result = translator.translate(word).text
     # translate CH to EN
     synset = wn.synsets(tran_result)

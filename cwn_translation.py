@@ -18,4 +18,4 @@ def search_word(word):
     return { id_: def_ for id_, def_ in zip(num, df) }
 # %%
 search_word('朋友')
-# %%
+

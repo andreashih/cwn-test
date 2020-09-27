@@ -16,4 +16,3 @@ friend = senses[0]
 friend.relations
 # %%
 friend.synonym
-# %%

@@ -1,16 +1,16 @@
 #%%
+from CwnGraph import CwnBase
 import re
 from googletrans import Translator
 from nltk.corpus import wordnet as wn
-from CwnGraph import CwnBase
-cwn = CwnBase()
 
 def search_word(word):
+    cwn = CwnBase() # initialize cwn
     cwn_senses = cwn.find_lemma(word)[0].senses
     
     word1 = re.sub('\^|\$', '', word) # remove the anchors
 
-    translator = Translator() # Initialize the translator
+    translator = Translator() # initialize the translator
     tran_result = translator.translate(word1).text # translate CH to EN
     synset = wn.synsets(tran_result)
 

@@ -14,16 +14,15 @@ def search_word(word):
     tran_result = translator.translate(word1).text # Translate CH to EN
     synset = wn.synsets(tran_result)
 
-    num = []
-    df = []
-    result = []
-    
+    num = [] # Id in wordnet
+    df = [] # Definition in wordnet
+        
     for i in range(0, len(synset)):
         df.append(synset[i].definition()) # Find the definition of the word
         num.append('{}-{}'.format(str(wn.synset(synset[i].name()).offset()).zfill(8), wn.synset(synset[i].name()).pos())) 
         # Find the id num of the synset. It has to be 8-digit with a pos tag.
     
-    return cwn_senses, { id_: def_ for id_, def_ in zip(num, df) }
+    return cwn_senses, { id_ : def_ for id_, def_ in zip(num, df) }
 
 # %%
 word = str(input("Please enter the word:"))

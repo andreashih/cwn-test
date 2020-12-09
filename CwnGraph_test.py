@@ -1,7 +1,7 @@
 # %%
-from pprint import pprint
-from CwnGraph import CwnBase
-CwnBase.install_cwn("cwn_graph.pyobj")
+#from pprint import pprint
+#from CwnGraph import CwnBase
+#CwnBase.install_cwn("cwn_graph.pyobj")
 # %%
 from CwnGraph import CwnBase
 cwn = CwnBase()
@@ -16,3 +16,5 @@ friend = senses[0]
 friend.relations
 # %%
 friend.synonym
+#%%
+cwn.find_senses(definition='縮寫')
